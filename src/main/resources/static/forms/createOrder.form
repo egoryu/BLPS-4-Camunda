@@ -1,0 +1,94 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Наличные",
+          "value": "1"
+        },
+        {
+          "label": "Бартер",
+          "value": "0"
+        }
+      ],
+      "label": "Способ оплаты",
+      "type": "radio",
+      "layout": {
+        "row": "Row_0jp7z0c",
+        "columns": null
+      },
+      "id": "Field_06xnl7v",
+      "key": "payType",
+      "defaultValue": "1"
+    },
+    {
+      "label": "Цена",
+      "type": "number",
+      "layout": {
+        "row": "Row_0cjadaa",
+        "columns": null
+      },
+      "id": "Field_1nxgxh6",
+      "key": "paySum",
+      "defaultValue": 0,
+      "increment": "10",
+      "serializeToString": false,
+      "decimalDigits": 0
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0qx5yuq",
+        "columns": null
+      },
+      "id": "Field_0aywnye",
+      "key": "payDate",
+      "timeLabel": "Time",
+      "timeSerializingFormat": "utc_normalized",
+      "timeInterval": 15,
+      "use24h": true
+    },
+    {
+      "label": "User id",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0jr1vaa",
+        "columns": null
+      },
+      "id": "Field_1pgufbv",
+      "key": "payUserId"
+    },
+    {
+      "label": "Trader id",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10q6gka",
+        "columns": null
+      },
+      "id": "Field_10774yd",
+      "key": "payTraderId"
+    },
+    {
+      "label": "Contractor Id",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0p53xnk",
+        "columns": null
+      },
+      "id": "Field_024i9wm",
+      "key": "payContractorId"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0j6r3lx",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

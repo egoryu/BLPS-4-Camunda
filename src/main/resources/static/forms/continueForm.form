@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Продолжать продажу",
+          "value": "5"
+        },
+        {
+          "label": "Отклонить",
+          "value": "2"
+        }
+      ],
+      "label": "Что будем делать дальше?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1ed2k5z",
+        "columns": null
+      },
+      "id": "Field_1ty19ht",
+      "key": "isContinue",
+      "defaultValue": "2"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1yypo4z",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

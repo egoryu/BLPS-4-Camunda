@@ -1,0 +1,73 @@
+{
+  "components": [
+    {
+      "label": "Username From",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_112l1er",
+        "columns": null
+      },
+      "id": "Field_07w8vfi",
+      "key": "messageUsernameFrom",
+      "readonly": true
+    },
+    {
+      "label": "Username To",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1b06d7g",
+        "columns": null
+      },
+      "id": "Field_07b7j1c",
+      "key": "messageUsernameTo",
+      "readonly": true
+    },
+    {
+      "label": "Текст",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1m9a58b",
+        "columns": null
+      },
+      "id": "Field_1m55ibm",
+      "key": "messageText"
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "Дата",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0qknrf0",
+        "columns": null
+      },
+      "id": "Field_1yn0tqx",
+      "key": "messageDate",
+      "timeLabel": "Время",
+      "timeSerializingFormat": "utc_normalized",
+      "timeInterval": 15,
+      "use24h": true,
+      "disallowPassedDates": false,
+      "readonly": true
+    },
+    {
+      "label": "Тип",
+      "type": "number",
+      "layout": {
+        "row": "Row_0q0nckj",
+        "columns": null
+      },
+      "id": "Field_0l8hn86",
+      "key": "messageType"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0lbn4e6",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

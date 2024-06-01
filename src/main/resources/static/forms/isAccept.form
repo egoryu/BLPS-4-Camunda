@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Изменить ообщение",
+          "value": "-1"
+        },
+        {
+          "label": "Принять контракт",
+          "value": "1"
+        }
+      ],
+      "label": "Radio group",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1gir9wx",
+        "columns": null
+      },
+      "id": "Field_0p48onf",
+      "key": "isAccept",
+      "defaultValue": "1"
+    },
+    {
+      "label": "id",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0myb91o",
+        "columns": null
+      },
+      "id": "Field_0r4tyk6",
+      "key": "messageId",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_15olg5b",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

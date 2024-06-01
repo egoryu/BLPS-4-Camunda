@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Отправить новое",
+          "value": "NEW"
+        },
+        {
+          "label": "Обновить",
+          "value": "UPDATE"
+        }
+      ],
+      "label": "Что будете делать?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_0xjaxbo",
+        "columns": null
+      },
+      "id": "Field_01ts5cp",
+      "key": "sendMod",
+      "defaultValue": "NEW"
+    }
+  ],
+  "type": "default",
+  "id": "Form_18dn8l3",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

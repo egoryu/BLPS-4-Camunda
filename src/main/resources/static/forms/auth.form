@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "label": "username",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1xp1b0r",
+        "columns": null
+      },
+      "id": "Field_1jxnp68",
+      "key": "username"
+    },
+    {
+      "label": "email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0qke3el",
+        "columns": null
+      },
+      "id": "Field_1ky3yjk",
+      "key": "email"
+    },
+    {
+      "label": "password",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0jki4v8",
+        "columns": null
+      },
+      "id": "Field_014ug0k",
+      "key": "password"
+    },
+    {
+      "values": [
+        {
+          "label": "WOMAN",
+          "value": "WOMAN"
+        },
+        {
+          "label": "MAN",
+          "value": "MAN"
+        },
+        {
+          "label": "TRADER",
+          "value": "TRADER"
+        },
+        {
+          "label": "ADMIN",
+          "value": "ADMIN"
+        }
+      ],
+      "label": "Role",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1w9pxu0",
+        "columns": null
+      },
+      "id": "Field_0prewvt",
+      "key": "role",
+      "defaultValue": "WOMAN"
+    }
+  ],
+  "type": "default",
+  "id": "auth_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}

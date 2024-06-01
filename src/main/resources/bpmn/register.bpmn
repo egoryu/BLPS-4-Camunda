@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0uysvzu" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.23.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <bpmn:process id="register_proc" name="Register" isExecutable="true" camunda:historyTimeToLive="8">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1n6xhyj</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1n6xhyj" sourceRef="StartEvent_1" targetRef="Activity_1h6fpep" />
+    <bpmn:endEvent id="Event_12yuz3o">
+      <bpmn:incoming>Flow_0oy1yio</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="Activity_1h6fpep" name="Регистрация" camunda:formKey="camunda-forms:/forms/auth.form">
+      <bpmn:extensionElements />
+      <bpmn:incoming>Flow_1n6xhyj</bpmn:incoming>
+      <bpmn:incoming>Flow_10man6e</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w04zbf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0w04zbf" sourceRef="Activity_1h6fpep" targetRef="register" />
+    <bpmn:serviceTask id="register" name="Регистрация" camunda:class="com.example.blps4.delegate.RegisterDelegate">
+      <bpmn:incoming>Flow_0w04zbf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0oy1yio</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0oy1yio" sourceRef="register" targetRef="Event_12yuz3o" />
+    <bpmn:boundaryEvent id="Event_0zm2g81" attachedToRef="register">
+      <bpmn:outgoing>Flow_0p2hgbs</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_094ea6y" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0p2hgbs" sourceRef="Event_0zm2g81" targetRef="Activity_07ajpvh" />
+    <bpmn:userTask id="Activity_07ajpvh" name="Произошла ошибка" camunda:formKey="camunda-forms:/forms/error.form">
+      <bpmn:incoming>Flow_0p2hgbs</bpmn:incoming>
+      <bpmn:outgoing>Flow_10man6e</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_10man6e" sourceRef="Activity_07ajpvh" targetRef="Activity_1h6fpep" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="register_proc">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1p1kkzu_di" bpmnElement="Activity_1h6fpep">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jz1jce_di" bpmnElement="register">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_12yuz3o_di" bpmnElement="Event_12yuz3o">
+        <dc:Bounds x="602" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1d3wo52_di" bpmnElement="Activity_07ajpvh">
+        <dc:Bounds x="360" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0zm2g81_di" bpmnElement="Event_0zm2g81">
+        <dc:Bounds x="472" y="139" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="477" y="182" width="26" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1n6xhyj_di" bpmnElement="Flow_1n6xhyj">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w04zbf_di" bpmnElement="Flow_0w04zbf">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0oy1yio_di" bpmnElement="Flow_0oy1yio">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="602" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0p2hgbs_di" bpmnElement="Flow_0p2hgbs">
+        <di:waypoint x="490" y="175" />
+        <di:waypoint x="490" y="260" />
+        <di:waypoint x="460" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10man6e_di" bpmnElement="Flow_10man6e">
+        <di:waypoint x="360" y="260" />
+        <di:waypoint x="320" y="260" />
+        <di:waypoint x="320" y="157" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
